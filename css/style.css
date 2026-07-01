@@ -534,6 +534,43 @@ a.treatment-index-item:hover .treatment-index-name {
   color: var(--color-gold);
 }
 
+.injectables-cta {
+  margin-top: 2rem;
+}
+
+/* Treatment detail page */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.back-link:hover {
+  color: var(--color-gold);
+}
+
+.treatment-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.treatment-detail-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.treatment-detail-price {
+  margin-top: 0.35rem;
+  font-weight: 700;
+  font-size: var(--text-xl);
+  color: var(--color-gold);
+}
+
 @media (min-width: 700px) {
   .treatment-index-item {
     grid-template-columns: auto 1fr auto;

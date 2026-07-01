@@ -4,11 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gorgeous Esthetics</title>
+  <meta name="description" content="Gorgeous Esthetics is d&eacute; praktijk in Middelharnis voor botox en skinbooster behandelingen, door een BIG-geregistreerd verpleegkundig specialist. Natuurlijke schoonheid, medisch vakmanschap.">
+  <meta property="og:title" content="Gorgeous Esthetics">
+  <meta property="og:description" content="Natuurlijke schoonheid, medisch vakmanschap. Botox en skinbooster behandelingen in Middelharnis door een BIG-geregistreerd verpleegkundig specialist.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <link rel="canonical" href="https://gorgeousesthetics.nl/">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Gorgeous Esthetics",
+    "url": "https://gorgeousesthetics.nl/",
+    "telephone": "+31622629400",
+    "email": "info@gorgeousesthetics.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Volta 8-37",
+      "postalCode": "3241 LW",
+      "addressLocality": "Middelharnis",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Tuesday",
+        "opens": "10:00",
+        "closes": "16:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Wednesday",
+        "opens": "18:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "09:00",
+        "closes": "13:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/gorgeoussesthetics"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -56,7 +102,7 @@
     <h2>Injectables</h2>
     <ol class="treatment-index">
       <li class="treatment-index-row">
-        <a href="behandelingen.html" class="treatment-index-item">
+        <a href="behandelingen/fronsrimpels.html" class="treatment-index-item">
           <span class="treatment-index-marker">
             <svg class="treatment-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M12 8 L11 24 M16 6 L16 24 M20 8 L21 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -69,7 +115,7 @@
         </a>
       </li>
       <li class="treatment-index-row">
-        <a href="behandelingen.html" class="treatment-index-item">
+        <a href="behandelingen/voorhoofdsrimpel.html" class="treatment-index-item">
           <span class="treatment-index-marker">
             <svg class="treatment-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M6 10 Q16 6 26 10 M6 16 Q16 12 26 16 M6 22 Q16 18 26 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -82,7 +128,7 @@
         </a>
       </li>
       <li class="treatment-index-row">
-        <a href="behandelingen.html" class="treatment-index-item">
+        <a href="behandelingen/kraaienpootjes.html" class="treatment-index-item">
           <span class="treatment-index-marker">
             <svg class="treatment-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M8 16 L17 16 M9 10 L17 14.5 M9 22 L17 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -95,6 +141,7 @@
         </a>
       </li>
     </ol>
+    <a href="behandelingen.html" class="btn btn-secondary injectables-cta">Bekijk alle behandelingen</a>
   </section>
 
   <footer class="site-footer">
@@ -110,11 +157,7 @@
           <a href="https://www.instagram.com/gorgeoussesthetics" target="_blank" rel="noopener">@gorgeoussesthetics</a>
         </div>
       </div>
-      <ul class="site-footer-links">
-        <li><a href="#" class="link-pending" title="Tekst volgt van klant">Klachtenregeling</a></li>
-        <li><a href="#" class="link-pending" title="Tekst volgt van klant">Disclaimer</a></li>
-        <li><a href="#" class="link-pending" title="Tekst volgt van klant">Privacy</a></li>
-      </ul>
+      <!-- TODO: klachtenregeling, disclaimer, privacy links terugzetten zodra content binnen is -->
     </div>
   </footer>
 
