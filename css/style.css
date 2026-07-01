@@ -481,9 +481,22 @@ h4 { font-size: var(--text-xl); }
   transition: padding-left 0.35s var(--ease-premium);
 }
 
-.treatment-index-number {
+.treatment-index-marker {
   grid-row: 1 / 3;
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.treatment-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-navy);
+}
+
+.treatment-index-number {
   font-family: var(--font-heading);
   font-weight: 300;
   font-size: var(--text-2xl);
@@ -536,6 +549,11 @@ a.treatment-index-item:hover .treatment-index-name {
 
   .treatment-index-number {
     font-size: var(--text-3xl);
+  }
+
+  .treatment-icon {
+    width: 28px;
+    height: 28px;
   }
 
   .treatment-index-name {
