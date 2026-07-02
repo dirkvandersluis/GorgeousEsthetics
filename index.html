@@ -1,188 +1,308 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gorgeous Esthetics</title>
-  <meta name="description" content="Gorgeous Esthetics is d&eacute; praktijk in Middelharnis voor botox en skinbooster behandelingen, door een BIG-geregistreerd verpleegkundig specialist. Natuurlijke schoonheid, medisch vakmanschap.">
-  <meta property="og:title" content="Gorgeous Esthetics">
-  <meta property="og:description" content="Natuurlijke schoonheid, medisch vakmanschap. Botox en skinbooster behandelingen in Middelharnis door een BIG-geregistreerd verpleegkundig specialist.">
+  <title>Gorgeous Esthetics | Botox &amp; Skinboosters in Middelharnis</title>
+  <meta name="description" content="Gorgeous Esthetics by Gorgi Joanna in Middelharnis: subtiele Botox- en Skinbooster-behandelingen met persoonlijke aandacht, rust en medische zorgvuldigheid.">
+  <meta property="og:title" content="Gorgeous Esthetics | Botox &amp; Skinboosters in Middelharnis">
+  <meta property="og:description" content="Subtiele Botox- en Skinbooster-behandelingen met persoonlijke aandacht in Middelharnis, door Gorgi Joanna.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="nl_NL">
   <link rel="canonical" href="https://gorgeousesthetics.nl/">
-  <script>document.documentElement.classList.add('js');</script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { navy: '#1A2E40', gold: '#D4AF37', cream: '#FDFBF7', sand: '#F5F1E9' },
+        fontFamily: { serif: ['"Cormorant Garamond"', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+      } },
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="css/style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Gorgeous Esthetics",
-    "url": "https://gorgeousesthetics.nl/",
-    "telephone": "+31622629400",
-    "email": "info@gorgeousesthetics.nl",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Volta 8-37",
-      "postalCode": "3241 LW",
-      "addressLocality": "Middelharnis",
-      "addressCountry": "NL"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Tuesday",
-        "opens": "10:00",
-        "closes": "16:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Wednesday",
-        "opens": "18:00",
-        "closes": "21:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Friday",
-        "opens": "09:00",
-        "closes": "13:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/gorgeoussesthetics"
-    ]
-  }
-  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap');
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-sans { font-family: 'Inter', system-ui, sans-serif; }
+    section[id] { scroll-margin-top: 6.5rem; }
+    ::selection { background-color: #D4AF37; color: #1A2E40; }
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .js .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
 
-  <header class="site-header">
-    <div class="container site-header-inner">
-      <a href="index.html" class="site-logo" aria-label="Gorgeous Esthetics">
-        <img src="img/logo.png" alt="Gorgeous Esthetics" class="site-logo-img" onerror="this.classList.add('is-broken')">
-        <span class="site-logo-fallback">Gorgeous Esthetics</span>
-      </a>
-      <nav class="site-nav" aria-label="Hoofdnavigatie">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="behandelingen.html">Behandelingen</a></li>
-          <li><a href="over-mij.html">Over mij</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<body class="bg-cream text-navy antialiased">
+
+  <!-- ============================ HEADER ============================ -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div id="header-bar" class="mt-3 flex items-center justify-between rounded-2xl border border-navy/10 bg-cream/80 px-5 py-3 backdrop-blur-md transition-all duration-300 ease-in-out md:px-7">
+        <a href="index.html" class="flex flex-col leading-none" aria-label="Gorgeous Esthetics home">
+          <span class="font-serif text-xl tracking-[0.18em] text-navy md:text-2xl" style="font-weight:600;">GORGEOUS ESTHETICS</span>
+          <span class="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.32em] text-gold">By Gorgi Joanna</span>
+        </a>
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Hoofdnavigatie">
+          <a href="index.html" aria-current="page" class="text-xs font-medium uppercase tracking-[0.15em] text-gold transition-colors duration-300">Home</a>
+          <a href="over-gorgi.html" class="text-xs font-medium uppercase tracking-[0.15em] text-navy/80 transition-colors duration-300 hover:text-gold">Over ons</a>
+          <a href="behandelingen.html" class="text-xs font-medium uppercase tracking-[0.15em] text-navy/80 transition-colors duration-300 hover:text-gold">Behandelingen</a>
+          <a href="tarieven.html" class="text-xs font-medium uppercase tracking-[0.15em] text-navy/80 transition-colors duration-300 hover:text-gold">Tarieven</a>
+          <a href="contact.html" class="text-xs font-medium uppercase tracking-[0.15em] text-navy/80 transition-colors duration-300 hover:text-gold">Contact</a>
+        </nav>
+        <div class="hidden items-center gap-3 md:flex">
+          <a href="https://wa.me/31622629400" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-navy/25 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-navy transition-all duration-300 ease-in-out hover:border-navy hover:scale-105">
+            <svg class="h-4 w-4 text-[#25D366]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01c-1.52 0-3.01-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.35c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.13 8.24z"/></svg>
+            Stel een vraag
+          </a>
+          <a href="contact.html" class="inline-flex items-center rounded-full border border-gold bg-navy px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-cream transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#22384c]">Afspraak boeken</a>
+        </div>
+        <button id="menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-navy/15 text-navy lg:hidden">
+          <svg id="icon-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="icon-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden">
+        <nav class="mt-2 rounded-2xl border border-navy/10 bg-cream/95 p-5 backdrop-blur-md" aria-label="Mobiele navigatie">
+          <ul class="flex flex-col divide-y divide-navy/10">
+            <li><a href="index.html" class="mobile-link block py-3 text-sm font-medium uppercase tracking-[0.14em] text-gold">Home</a></li>
+            <li><a href="over-gorgi.html" class="mobile-link block py-3 text-sm font-medium uppercase tracking-[0.14em] text-navy">Over ons</a></li>
+            <li><a href="behandelingen.html" class="mobile-link block py-3 text-sm font-medium uppercase tracking-[0.14em] text-navy">Behandelingen</a></li>
+            <li><a href="tarieven.html" class="mobile-link block py-3 text-sm font-medium uppercase tracking-[0.14em] text-navy">Tarieven</a></li>
+            <li><a href="contact.html" class="mobile-link block py-3 text-sm font-medium uppercase tracking-[0.14em] text-navy">Contact</a></li>
+          </ul>
+          <div class="mt-5 flex flex-col gap-3">
+            <a href="https://wa.me/31622629400" target="_blank" rel="noopener" class="mobile-link inline-flex items-center justify-center gap-2 rounded-full border border-navy/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-navy">Stel een vraag via WhatsApp</a>
+            <a href="contact.html" class="mobile-link inline-flex items-center justify-center rounded-full border border-gold bg-navy px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-cream">Afspraak boeken</a>
+          </div>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Verpleegkundig specialist injectables</p>
-        <h1>Natuurlijke schoonheid,<br>medisch vakmanschap</h1>
-        <p class="hero-tagline">Botox en skinbooster behandelingen in Middelharnis door een BIG-geregistreerd verpleegkundig specialist.</p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary">Neem contact op</a>
-          <a href="behandelingen.html" class="btn btn-secondary">Bekijk behandelingen</a>
+  <main>
+    <!-- ============================ HERO ============================ -->
+    <section id="hero" class="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
+        <div class="reveal">
+          <p class="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-gold">Cosmetisch behandelaar &middot; Middelharnis</p>
+          <h1 class="font-serif text-4xl font-medium leading-[1.08] text-navy sm:text-5xl lg:text-6xl">Natuurlijke elegantie en persoonlijke aandacht in Middelharnis</h1>
+          <p class="mt-7 max-w-xl text-base leading-relaxed text-navy/75 md:text-lg">Ik ben Gorgi Joanna Georgina Strang, het gezicht achter Gorgeous Esthetics. Als cosmetisch behandelaar richt ik mij op subtiele Botox- en Skinbooster-behandelingen die uw eigen uitstraling verfrissen, zonder uw unieke mimiek te verliezen.</p>
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-navy px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-cream transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gold hover:text-navy">Online agenda openen</a>
+            <a href="https://wa.me/31622629400" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full border border-navy px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-navy transition-all duration-300 ease-in-out hover:scale-105 hover:bg-navy hover:text-cream">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+              Stel een vraag via WhatsApp
+            </a>
+          </div>
         </div>
-        <ul class="hero-trust">
-          <li>13+ jaar medische ervaring</li>
-          <li>Persoonlijke aanpak</li>
-          <li>Natuurlijke resultaten</li>
+        <div class="reveal">
+          <div class="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border border-gold/40 bg-sand shadow-[0_40px_80px_-40px_rgba(26,46,64,0.45)]">
+            <div class="flex h-full w-full items-center justify-center"><span class="font-serif text-lg italic text-navy/40">Professioneel portret volgt</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INFO-STRIP ==================== -->
+    <section class="bg-sand">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-3 md:gap-8">
+        <div class="reveal flex gap-4">
+          <span class="mt-1 shrink-0 text-gold" aria-hidden="true"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><h3 class="font-serif text-xl font-semibold text-navy">Locatie Middelharnis</h3><p class="mt-2 text-sm leading-relaxed text-navy/70">Volta 8-37. Gemakkelijk en gratis parkeren voor de deur.</p></div>
+        </div>
+        <div class="reveal flex gap-4 md:border-x md:border-navy/10 md:px-8">
+          <span class="mt-1 shrink-0 text-gold" aria-hidden="true"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div><h3 class="font-serif text-xl font-semibold text-navy">Kwaliteit &amp; Veiligheid</h3><p class="mt-2 text-sm leading-relaxed text-navy/70"><span class="tracking-wide text-gold">★★★★★</span> 5.0 Google score. Geregistreerd en opgeleid conform medische richtlijnen.</p></div>
+        </div>
+        <div class="reveal flex gap-4">
+          <span class="mt-1 shrink-0 text-gold" aria-hidden="true"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><h3 class="font-serif text-xl font-semibold text-navy">Flexibele openingstijden</h3><p class="mt-2 text-sm leading-relaxed text-navy/70">Geopend op dinsdag, woensdagavond en vrijdagochtend.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INTRO: MIJN COSMETISCHE KLINIEK ==================== -->
+    <section class="py-24 md:py-32">
+      <div class="mx-auto max-w-3xl px-5 text-center sm:px-8">
+        <p class="reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-gold">Welkom</p>
+        <h2 class="reveal font-serif text-3xl font-medium leading-tight text-navy sm:text-4xl md:text-5xl">Mijn Cosmetische Kliniek</h2>
+        <div class="reveal mx-auto mt-6 h-px w-24 bg-gold/70"></div>
+        <p class="reveal mt-8 text-base leading-relaxed text-navy/75 md:text-lg">Bij Gorgeous Esthetics draait alles om aandacht. Een eerste consult begint nooit met een injectie, maar met een gesprek. Ik neem ruim de tijd om zorgvuldig naar uw wensen te luisteren, uw medische achtergrond te screenen en samen te kijken wat realistisch en esthetisch passend is voor uw gezicht.</p>
+        <p class="reveal mt-5 text-base leading-relaxed text-navy/75 md:text-lg">Op basis daarvan stel ik een realistisch behandelplan op maat op, waarin veiligheid, natuurlijkheid en uw eigen uitstraling altijd centraal staan. Geen haastwerk en geen overbehandeling &mdash; wel eerlijk advies en de tijd die u verdient.</p>
+      </div>
+    </section>
+
+    <!-- ==================== KERNWAARDEN ==================== -->
+    <section class="bg-sand py-24 md:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-gold">Waar ik voor sta</p>
+          <h2 class="reveal font-serif text-3xl font-medium leading-tight text-navy sm:text-4xl">De kern van elke behandeling</h2>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="reveal rounded-2xl border border-navy/10 bg-white p-8 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_30px_60px_-40px_rgba(26,46,64,0.4)]">
+            <span class="font-serif text-2xl text-gold">01</span>
+            <h3 class="mt-3 font-serif text-2xl font-semibold text-navy">Tijd &amp; Persoonlijke aandacht</h3>
+            <p class="mt-3 text-sm leading-relaxed text-navy/70">Consulten zonder haast. Ruime tijd voor uw verhaal, uw vragen en zorgvuldige nazorg.</p>
+          </div>
+          <div class="reveal rounded-2xl border border-navy/10 bg-white p-8 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_30px_60px_-40px_rgba(26,46,64,0.4)]">
+            <span class="font-serif text-2xl text-gold">02</span>
+            <h3 class="mt-3 font-serif text-2xl font-semibold text-navy">Kwalificaties &amp; Opleiding</h3>
+            <p class="mt-3 text-sm leading-relaxed text-navy/70">Gecertificeerd en intensief opgeleid bij de gerenommeerde Aureus Kliniek, volgens de nieuwste technieken.</p>
+          </div>
+          <div class="reveal rounded-2xl border border-navy/10 bg-white p-8 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_30px_60px_-40px_rgba(26,46,64,0.4)]">
+            <span class="font-serif text-2xl text-gold">03</span>
+            <h3 class="mt-3 font-serif text-2xl font-semibold text-navy">Subtiele, natuurlijke resultaten</h3>
+            <p class="mt-3 text-sm leading-relaxed text-navy/70">Behoud van authenticiteit. Een frissere, uitgeruste blik zonder dat uw mimiek verloren gaat.</p>
+          </div>
+          <div class="reveal rounded-2xl border border-navy/10 bg-white p-8 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_30px_60px_-40px_rgba(26,46,64,0.4)]">
+            <span class="font-serif text-2xl text-gold">04</span>
+            <h3 class="mt-3 font-serif text-2xl font-semibold text-navy">Veiligheid voorop</h3>
+            <p class="mt-3 text-sm leading-relaxed text-navy/70">Bewustzijn van risico's en werken volgens strikte medische protocollen en IGJ-richtlijnen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BEHANDELINGEN PREVIEW ==================== -->
+    <section class="py-24 md:py-32">
+      <div class="mx-auto max-w-3xl px-5 text-center sm:px-8">
+        <p class="reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-gold">Behandelingen</p>
+        <h2 class="reveal font-serif text-3xl font-medium leading-tight text-navy sm:text-4xl md:text-5xl">Gespecialiseerde &amp; preventieve zorg</h2>
+        <p class="reveal mt-6 text-base leading-relaxed text-navy/75 md:text-lg">Doelgerichte behandelingen die de huid verbeteren en rimpels preventief én correctief aanpakken, altijd met behoud van uw natuurlijke uitstraling.</p>
+      </div>
+      <div class="mx-auto mt-14 grid max-w-6xl gap-8 px-5 sm:px-8 lg:grid-cols-2">
+        <a href="behandelingen.html" class="reveal group flex flex-col rounded-3xl border border-navy/10 bg-white p-9 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_30px_70px_-45px_rgba(26,46,64,0.45)] md:p-11">
+          <span class="h-1 w-14 rounded-full bg-gold"></span>
+          <h3 class="mt-6 font-serif text-3xl font-semibold text-navy">Botulinetoxine (Botox)</h3>
+          <p class="mt-4 text-base leading-relaxed text-navy/75">Effectief tegen dynamische rimpels zoals de fronsrimpel, voorhoofdslijnen en kraaienpootjes &mdash; en inzetbaar bij medische klachten zoals tandenknarsen of spanningshoofdpijn.</p>
+          <span class="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-navy transition-colors duration-300 group-hover:text-gold">Lees meer<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="behandelingen.html" class="reveal group flex flex-col rounded-3xl border border-navy/10 bg-white p-9 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_30px_70px_-45px_rgba(26,46,64,0.45)] md:p-11">
+          <span class="h-1 w-14 rounded-full bg-gold"></span>
+          <h3 class="mt-6 font-serif text-3xl font-semibold text-navy">Skinboosters</h3>
+          <p class="mt-4 text-base leading-relaxed text-navy/75">Diepe hydratatie op basis van hyaluronzuur en vitaminen die de eigen collageenaanmaak activeert, voor een natuurlijke, gezonde glow en een stevigere huid.</p>
+          <span class="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-navy transition-colors duration-300 group-hover:text-gold">Lees meer<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== SOCIAL PROOF ==================== -->
+    <section class="bg-navy py-24 text-cream md:py-32">
+      <div class="mx-auto max-w-3xl px-5 text-center sm:px-8">
+        <p class="reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-gold">Ervaringen</p>
+        <h2 class="reveal font-serif text-3xl font-medium leading-tight text-cream sm:text-4xl md:text-5xl">Wat cliënten waarderen</h2>
+        <p class="reveal mt-6 text-base leading-relaxed text-cream/70">Cliënten prijzen vooral de rustige, discrete sfeer, de tijd die er wordt genomen en het eerlijke advies. Onze Google-beoordeling staat op een <span class="text-gold">5.0</span>.</p>
+      </div>
+      <div class="mx-auto mt-14 grid max-w-6xl gap-6 px-5 sm:px-8 md:grid-cols-3">
+        <figure class="reveal flex flex-col rounded-2xl border border-cream/15 bg-white/5 p-8">
+          <div class="text-lg tracking-wide text-gold" aria-label="5 van 5 sterren">★★★★★</div>
+          <blockquote class="mt-4 flex-1 font-serif text-lg italic leading-relaxed text-cream/80">Ruimte voor een geverifieerde Google-review.</blockquote>
+          <figcaption class="mt-6 text-xs uppercase tracking-[0.14em] text-cream/50">Cliënt &middot; via Google</figcaption>
+        </figure>
+        <figure class="reveal flex flex-col rounded-2xl border border-cream/15 bg-white/5 p-8">
+          <div class="text-lg tracking-wide text-gold" aria-label="5 van 5 sterren">★★★★★</div>
+          <blockquote class="mt-4 flex-1 font-serif text-lg italic leading-relaxed text-cream/80">Ruimte voor een geverifieerde Google-review.</blockquote>
+          <figcaption class="mt-6 text-xs uppercase tracking-[0.14em] text-cream/50">Cliënt &middot; via Google</figcaption>
+        </figure>
+        <figure class="reveal flex flex-col rounded-2xl border border-cream/15 bg-white/5 p-8">
+          <div class="text-lg tracking-wide text-gold" aria-label="5 van 5 sterren">★★★★★</div>
+          <blockquote class="mt-4 flex-1 font-serif text-lg italic leading-relaxed text-cream/80">Ruimte voor een geverifieerde Google-review.</blockquote>
+          <figcaption class="mt-6 text-xs uppercase tracking-[0.14em] text-cream/50">Cliënt &middot; via Google</figcaption>
+        </figure>
+      </div>
+      <div class="mt-12 text-center">
+        <a href="contact.html" class="reveal inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-navy transition-all duration-300 ease-in-out hover:scale-105">Plan uw kennismaking</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="bg-navy text-cream">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <h3 class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">Menu</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="index.html" class="text-cream/80 transition-colors duration-300 hover:text-gold">Home</a></li>
+          <li><a href="over-gorgi.html" class="text-cream/80 transition-colors duration-300 hover:text-gold">Over ons</a></li>
+          <li><a href="behandelingen.html" class="text-cream/80 transition-colors duration-300 hover:text-gold">Behandelingen</a></li>
+          <li><a href="tarieven.html" class="text-cream/80 transition-colors duration-300 hover:text-gold">Tarieven</a></li>
+          <li><a href="contact.html" class="text-cream/80 transition-colors duration-300 hover:text-gold">Contact</a></li>
         </ul>
       </div>
-      <div class="hero-image-wrap">
-        <div class="content-pending hero-photo">Foto volgt</div>
+      <div>
+        <h3 class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">Useful links</h3>
+        <ul class="space-y-3 text-sm text-cream/60">
+          <li>Cookie Policy</li>
+          <li>Privacy Policy</li>
+          <li>Algemene voorwaarden</li>
+          <li>Klachtenregeling Wkkgz</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">Contact &amp; locatie</h3>
+        <ul class="space-y-3 text-sm text-cream/80">
+          <li>Volta 8-37, 3241 LW Middelharnis</li>
+          <li><a href="https://wa.me/31622629400" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-gold">06 22 62 94 00 &middot; WhatsApp</a></li>
+          <li><a href="mailto:info@gorgeousesthetics.nl" class="transition-colors duration-300 hover:text-gold">info@gorgeousesthetics.nl</a></li>
+          <li><a href="https://www.instagram.com/gorgeoussesthetics" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-gold">@gorgeoussesthetics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">Compliance &amp; erkenning</h3>
+        <div class="rounded-xl border border-cream/15 p-5 text-xs leading-relaxed text-cream/70">Kwaliteitswaarborging: Gorgeous Esthetics werkt uitsluitend met gecertificeerde behandelaren. Volledig opgeleid conform de medische standaarden van de Aureus Kliniek. Gecontroleerde kwaliteit en aangesloten bij de wettelijke Wkkgz-geschillencommissie. Behandelingen uitsluitend vanaf 18 jaar.</div>
       </div>
     </div>
-  </section>
-
-  <div class="container">
-    <svg class="brand-divider" viewBox="0 0 400 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="0" y1="20" x2="150" y2="20" stroke="currentColor" stroke-width="1"/>
-      <line x1="250" y1="20" x2="400" y2="20" stroke="currentColor" stroke-width="1"/>
-      <g stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="178" y="14" width="34" height="12" rx="1"/>
-        <line x1="212" y1="20" x2="228" y2="20"/>
-        <line x1="228" y1="14" x2="228" y2="26"/>
-        <line x1="178" y1="20" x2="158" y2="20"/>
-        <line x1="158" y1="20" x2="150" y2="16"/>
-        <line x1="186" y1="14" x2="186" y2="26"/>
-        <line x1="194" y1="14" x2="194" y2="26"/>
-        <line x1="202" y1="14" x2="202" y2="26"/>
-      </g>
-    </svg>
-  </div>
-
-  <section class="container reveal">
-    <h2>Welkom bij Gorgeous Esthetics</h2>
-    <p class="intro-lead">Mijn naam is Gorgi, BIG-geregistreerd verpleegkundig specialist en trotse eigenaar van Gorgeous Esthetics. Voor veel mensen is het beroep verpleegkundig specialist nog onbekend, maar door mijn aanvullende masteropleiding ben ik zelfstandig bevoegd om medische diagnoses te stellen en behandelingen uit te voeren. Dat betekent dat je bij mij terecht kunt voor zowel cosmetische als medische injectables en mag je uitstekende kwaliteit en professionaliteit verwachten.</p>
-  </section>
-
-  <section class="container reveal">
-    <h2>Injectables</h2>
-    <ol class="treatment-index">
-      <li class="treatment-index-row">
-        <a href="behandelingen/fronsrimpels.html" class="treatment-index-item">
-          <span class="treatment-index-marker">
-            <svg class="treatment-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M12 8 L11 24 M16 6 L16 24 M20 8 L21 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <span class="treatment-index-number">01</span>
-          </span>
-          <span class="treatment-index-name">Fronsrimpels</span>
-          <span class="treatment-index-desc">Verzacht verticale rimpels tussen de wenkbrauwen</span>
-          <span class="treatment-index-price">&euro;150</span>
-        </a>
-      </li>
-      <li class="treatment-index-row">
-        <a href="behandelingen/voorhoofdsrimpel.html" class="treatment-index-item">
-          <span class="treatment-index-marker">
-            <svg class="treatment-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M6 10 Q16 6 26 10 M6 16 Q16 12 26 16 M6 22 Q16 18 26 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <span class="treatment-index-number">02</span>
-          </span>
-          <span class="treatment-index-name">Voorhoofdsrimpel</span>
-          <span class="treatment-index-desc">Vermindert horizontale lijnen in het voorhoofd</span>
-          <span class="treatment-index-price">&euro;150</span>
-        </a>
-      </li>
-      <li class="treatment-index-row">
-        <a href="behandelingen/kraaienpootjes.html" class="treatment-index-item">
-          <span class="treatment-index-marker">
-            <svg class="treatment-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M8 16 L17 16 M9 10 L17 14.5 M9 22 L17 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <span class="treatment-index-number">03</span>
-          </span>
-          <span class="treatment-index-name">Kraaienpootjes</span>
-          <span class="treatment-index-desc">Verzacht fijne lijntjes rond de ogen</span>
-          <span class="treatment-index-price">&euro;150</span>
-        </a>
-      </li>
-    </ol>
-    <a href="behandelingen.html" class="btn btn-secondary injectables-cta">Bekijk alle behandelingen</a>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container site-footer-inner">
-      <div class="site-footer-top">
-        <div>
-          <p class="site-footer-name">Gorgeous Esthetics</p>
-          <p>Volta 8-37, 3241 LW Middelharnis</p>
-        </div>
-        <div class="site-footer-contact">
-          <a href="mailto:info@gorgeousesthetics.nl">Mail</a>
-          <a href="https://wa.me/31622629400" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.instagram.com/gorgeoussesthetics" target="_blank" rel="noopener">@gorgeoussesthetics</a>
-        </div>
-      </div>
-      <!-- TODO: klachtenregeling, disclaimer, privacy links terugzetten zodra content binnen is -->
+    <div class="border-t border-cream/10">
+      <div class="mx-auto max-w-7xl px-5 py-6 text-center text-xs text-cream/50 sm:px-8">&copy; 2026 Gorgeous Esthetics. Alle rechten voorbehouden. Designed with elegance.</div>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- ============================ SCRIPTS ============================ -->
+  <script>
+    (function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
+      if (!toggle || !menu) return;
+      const setOpen = (open) => {
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+      };
+      toggle.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
+      menu.querySelectorAll('.mobile-link').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+    })();
+    (function () {
+      const bar = document.getElementById('header-bar');
+      if (!bar) return;
+      const onScroll = () => {
+        const s = window.scrollY > 12;
+        bar.classList.toggle('bg-cream/95', s);
+        bar.classList.toggle('shadow-[0_16px_40px_-24px_rgba(26,46,64,0.5)]', s);
+        bar.classList.toggle('bg-cream/80', !s);
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) { els.forEach((el) => el.classList.add('is-visible')); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); } });
+      }, { threshold: 0.12 });
+      els.forEach((el) => io.observe(el));
+    })();
+  </script>
 </body>
 </html>
