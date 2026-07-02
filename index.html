@@ -61,7 +61,10 @@
 
   <header class="site-header">
     <div class="container site-header-inner">
-      <a href="index.html" class="site-logo">Gorgeous Esthetics</a>
+      <a href="index.html" class="site-logo" aria-label="Gorgeous Esthetics">
+        <img src="img/logo.png" alt="Gorgeous Esthetics" class="site-logo-img" onerror="this.classList.add('is-broken')">
+        <span class="site-logo-fallback">Gorgeous Esthetics</span>
+      </a>
       <nav class="site-nav" aria-label="Hoofdnavigatie">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -75,24 +78,42 @@
 
   <section class="hero">
     <div class="container hero-grid">
-      <div class="hero-image-wrap">
-        <div class="content-pending hero-photo blob-frame">Foto volgt</div>
-        <div class="hero-badge">
-          <ul class="hero-features">
-            <li>13+ jaar medische ervaring</li>
-            <li>Persoonlijke aanpak</li>
-            <li>Natuurlijke resultaten</li>
-          </ul>
-        </div>
-      </div>
       <div class="hero-copy">
         <p class="eyebrow">Verpleegkundig specialist injectables</p>
         <h1>Natuurlijke schoonheid,<br>medisch vakmanschap</h1>
-        <p class="hero-tagline">Botox en skinbooster behandelingen in Middelharnis door een BIG-geregistreerd verpleegkundig specialist</p>
-        <a href="contact.html" class="btn btn-primary">Neem contact op</a>
+        <p class="hero-tagline">Botox en skinbooster behandelingen in Middelharnis door een BIG-geregistreerd verpleegkundig specialist.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Neem contact op</a>
+          <a href="behandelingen.html" class="btn btn-secondary">Bekijk behandelingen</a>
+        </div>
+        <ul class="hero-trust">
+          <li>13+ jaar medische ervaring</li>
+          <li>Persoonlijke aanpak</li>
+          <li>Natuurlijke resultaten</li>
+        </ul>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="content-pending hero-photo">Foto volgt</div>
       </div>
     </div>
   </section>
+
+  <div class="container">
+    <svg class="brand-divider" viewBox="0 0 400 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="0" y1="20" x2="150" y2="20" stroke="currentColor" stroke-width="1"/>
+      <line x1="250" y1="20" x2="400" y2="20" stroke="currentColor" stroke-width="1"/>
+      <g stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="178" y="14" width="34" height="12" rx="1"/>
+        <line x1="212" y1="20" x2="228" y2="20"/>
+        <line x1="228" y1="14" x2="228" y2="26"/>
+        <line x1="178" y1="20" x2="158" y2="20"/>
+        <line x1="158" y1="20" x2="150" y2="16"/>
+        <line x1="186" y1="14" x2="186" y2="26"/>
+        <line x1="194" y1="14" x2="194" y2="26"/>
+        <line x1="202" y1="14" x2="202" y2="26"/>
+      </g>
+    </svg>
+  </div>
 
   <section class="container reveal">
     <h2>Welkom bij Gorgeous Esthetics</h2>

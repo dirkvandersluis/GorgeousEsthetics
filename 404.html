@@ -15,7 +15,10 @@
 
   <header class="site-header">
     <div class="container site-header-inner">
-      <a href="index.html" class="site-logo">Gorgeous Esthetics</a>
+      <a href="index.html" class="site-logo" aria-label="Gorgeous Esthetics">
+        <img src="img/logo.png" alt="Gorgeous Esthetics" class="site-logo-img" onerror="this.classList.add('is-broken')">
+        <span class="site-logo-fallback">Gorgeous Esthetics</span>
+      </a>
       <nav class="site-nav" aria-label="Hoofdnavigatie">
         <ul>
           <li><a href="index.html">Home</a></li>
