@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-navy);
   line-height: 1.15;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 h1 { font-size: var(--text-5xl); font-weight: 400; letter-spacing: -0.02em; }
@@ -132,7 +133,7 @@ h4 { font-size: var(--text-xl); }
   border-radius: 0;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background-color 0.3s var(--ease-premium), color 0.3s var(--ease-premium), border-color 0.3s var(--ease-premium);
+  transition: background-color 0.3s var(--ease-premium), color 0.3s var(--ease-premium), border-color 0.3s var(--ease-premium), transform 0.2s var(--ease-premium);
 }
 
 .btn-primary {
@@ -741,4 +742,71 @@ a.treatment-index-item:hover .treatment-index-name {
   .swatch-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* ========================================================================
+   Polish pass — premium refinement (redesign-skill audit + soft-skill)
+   Verfijnt de bestaande identiteit; palet, fonts en structuur blijven gelijk.
+   ======================================================================== */
+
+/* Vloeiend in-page scrollen, uit bij prefers-reduced-motion */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Voorkom wees-/weduwe-woorden in lopende tekst */
+p {
+  text-wrap: pretty;
+}
+
+/* Leesbare regellengte (~65 tekens) voor lange tekst */
+.intro-lead,
+.over-mij-text p {
+  max-width: 65ch;
+}
+
+/* Tabelcijfers zodat prijzen netjes uitlijnen */
+.treatment-index-price,
+.treatment-detail-price {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Royaler verticaal ritme op contentsecties (niet header/footer/hero) */
+section.container {
+  padding-block: clamp(2.75rem, 5vw, 4.25rem);
+}
+
+/* Zichtbare, merkgebonden focus-ring voor toetsenbordnavigatie */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* Fysieke "ingedrukt"-feedback op knoppen */
+.btn:active {
+  transform: translateY(1px);
+}
+
+.back-link {
+  transition: color 0.25s ease;
+}
+
+/* Subtiele filmgrain — breekt de vlakke digitale steriliteit, kleur blijft gelijk */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
 }
