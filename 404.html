@@ -1,58 +1,57 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina niet gevonden - Gorgeous Esthetics</title>
-  <script>document.documentElement.classList.add('js');</script>
+  <title>Pagina niet gevonden | Gorgeous Esthetics</title>
+  <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { navy: '#1A2E40', gold: '#D4AF37', cream: '#FDFBF7', sand: '#F5F1E9' },
+        fontFamily: { serif: ['"Cormorant Garamond"', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+      } },
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  </style>
 </head>
-<body>
 
-  <header class="site-header">
-    <div class="container site-header-inner">
-      <a href="index.html" class="site-logo" aria-label="Gorgeous Esthetics">
-        <img src="img/logo.png" alt="Gorgeous Esthetics" class="site-logo-img" onerror="this.classList.add('is-broken')">
-        <span class="site-logo-fallback">Gorgeous Esthetics</span>
-      </a>
-      <nav class="site-nav" aria-label="Hoofdnavigatie">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="behandelingen.html">Behandelingen</a></li>
-          <li><a href="over-mij.html">Over mij</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<body class="flex min-h-screen flex-col bg-cream text-navy antialiased">
+
+  <header class="w-full">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div class="mt-3 flex items-center gap-6 rounded-2xl border border-navy/10 bg-cream/80 px-5 py-3 backdrop-blur-md md:px-7">
+        <a href="index.html" class="flex items-center" aria-label="Gorgeous Esthetics home">
+          <img src="img/logo.png" alt="Gorgeous Esthetics" class="h-12 w-auto md:h-14">
+        </a>
+        <a href="index.html" class="ml-auto inline-flex items-center rounded-full border border-gold bg-navy px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-cream transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#22384c]">Naar home</a>
+      </div>
     </div>
   </header>
 
-  <section class="container reveal">
-    <h1>Pagina niet gevonden</h1>
-    <p>Deze pagina bestaat niet (meer) of is verplaatst. Ga terug naar de homepage om verder te kijken.</p>
-    <a href="index.html" class="btn btn-primary injectables-cta">Naar de homepage</a>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container site-footer-inner">
-      <div class="site-footer-top">
-        <div>
-          <p class="site-footer-name">Gorgeous Esthetics</p>
-          <p>Volta 8-37, 3241 LW Middelharnis</p>
-        </div>
-        <div class="site-footer-contact">
-          <a href="mailto:info@gorgeousesthetics.nl">Mail</a>
-          <a href="https://wa.me/31622629400" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.instagram.com/gorgeoussesthetics" target="_blank" rel="noopener">@gorgeoussesthetics</a>
-        </div>
+  <main class="flex flex-1 items-center justify-center px-5 py-24 sm:px-8">
+    <div class="max-w-xl text-center">
+      <p class="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-gold">404</p>
+      <h1 class="font-serif text-4xl font-medium leading-tight text-navy sm:text-5xl">Deze pagina bestaat niet</h1>
+      <p class="mt-6 text-base leading-relaxed text-navy/75">De pagina die u zoekt is verplaatst of bestaat niet (meer). Ga terug naar de homepage of neem gerust contact op.</p>
+      <div class="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+        <a href="index.html" class="inline-flex items-center justify-center rounded-full bg-navy px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-cream transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gold hover:text-navy">Naar de homepage</a>
+        <a href="contact.html" class="inline-flex items-center justify-center rounded-full border border-navy px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-navy transition-all duration-300 ease-in-out hover:scale-105 hover:bg-navy hover:text-cream">Contact</a>
       </div>
-      <!-- TODO: klachtenregeling, disclaimer, privacy links terugzetten zodra content binnen is -->
     </div>
+  </main>
+
+  <footer class="bg-navy">
+    <div class="mx-auto max-w-7xl px-5 py-8 text-center text-xs text-cream/50 sm:px-8">&copy; 2026 Gorgeous Esthetics. Alle rechten voorbehouden. Designed with elegance.</div>
   </footer>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
