@@ -1,2 +1,56 @@
 [build]
   publish = "."
+  command = "npm install && npm run build"
+
+# ---------------------------------------------------------------------------
+# Security headers op alle paden
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Strikte CSP: alleen eigen origin voor scripts/styles/fonts/afbeeldingen.
+    # De site laadt geen externe scripts of styles meer (Tailwind wordt lokaal gebouwd,
+    # fonts zijn self-hosted). Inline scripts/styles zijn verwijderd, dus geen 'unsafe-inline'.
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+# ---------------------------------------------------------------------------
+# Cache-control: HTML kort (altijd revalideren), statische assets lang + immutable
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ---------------------------------------------------------------------------
+# Canonicalisatie: www doorsturen naar non-www (voorkomt duplicate content)
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "https://www.gorgeousesthetics.nl/*"
+  to = "https://gorgeousesthetics.nl/:splat"
+  status = 301
+  force = true

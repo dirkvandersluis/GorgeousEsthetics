@@ -12,28 +12,9 @@
   <link rel="canonical" href="https://gorgeousesthetics.nl/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: {
-        colors: { navy: '#1A2E40', gold: '#D4AF37', cream: '#FDFBF7', sand: '#F5F1E9' },
-        fontFamily: { serif: ['"Cormorant Garamond"', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
-      } },
-    };
-  </script>
   <link rel="stylesheet" href="css/fonts.css">
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
-    .font-sans { font-family: 'Inter', system-ui, sans-serif; }
-    section[id] { scroll-margin-top: 6.5rem; }
-    ::selection { background-color: #D4AF37; color: #1A2E40; }
-    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
-    .js .reveal.is-visible { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .js .reveal { opacity: 1; transform: none; transition: none; } }
-  </style>
-  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/tailwind.css">
+  <script src="js/head.js"></script>
 </head>
 
 <body class="bg-cream text-navy antialiased">
@@ -215,8 +196,8 @@
         <h3 class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">Useful links</h3>
         <ul class="space-y-3 text-sm text-cream/60">
           <li>Cookie Policy</li>
-          <li>Privacy Policy</li>
-          <li>Algemene voorwaarden</li>
+          <li><a href="privacy.html" class="transition-colors duration-300 hover:text-gold">Privacy Policy</a></li>
+          <li><a href="voorwaarden.html" class="transition-colors duration-300 hover:text-gold">Algemene voorwaarden</a></li>
           <li>Klachtenregeling Wkkgz</li>
         </ul>
       </div>
@@ -243,63 +224,6 @@
   </footer>
 
   <!-- ============================ SCRIPTS ============================ -->
-  <script>
-    (function () {
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('mobile-menu');
-      const iconOpen = document.getElementById('icon-open');
-      const iconClose = document.getElementById('icon-close');
-      if (!toggle || !menu) return;
-      const setOpen = (open) => {
-        menu.classList.toggle('hidden', !open);
-        iconOpen.classList.toggle('hidden', open);
-        iconClose.classList.toggle('hidden', !open);
-        toggle.setAttribute('aria-expanded', String(open));
-        toggle.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
-      };
-      toggle.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
-      menu.querySelectorAll('.mobile-link').forEach((link) => link.addEventListener('click', () => setOpen(false)));
-    })();
-    (function () {
-      const bar = document.getElementById('header-bar');
-      if (!bar) return;
-      const onScroll = () => {
-        const s = window.scrollY > 12;
-        bar.classList.toggle('bg-cream/95', s);
-        bar.classList.toggle('shadow-[0_16px_40px_-24px_rgba(26,46,64,0.5)]', s);
-        bar.classList.toggle('bg-cream/80', !s);
-      };
-      onScroll();
-      window.addEventListener('scroll', onScroll, { passive: true });
-    })();
-    (function () {
-      const els = document.querySelectorAll('.reveal');
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce || !('IntersectionObserver' in window)) { els.forEach((el) => el.classList.add('is-visible')); return; }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); } });
-      }, { threshold: 0.12 });
-      els.forEach((el) => io.observe(el));
-    })();
-
-    // Slimme "Afspraak boeken"-CTA: op de contactpagina niet herladen, maar smooth scrollen naar #contactkaart
-    (function () {
-      const path = window.location.pathname.replace(/\/+$/, '');
-      const onContact = /(?:^|\/)contact(?:\.html)?$/.test(path);
-      if (!onContact) return;                       // reguliere pagina's: knop blijft een normale link
-      const target = document.getElementById('contactkaart');
-      if (!target) return;
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      document.querySelectorAll('[data-book-cta]').forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-          target.setAttribute('tabindex', '-1');
-          target.focus({ preventScroll: true });
-          history.replaceState(null, '', '#contactkaart');
-        });
-      });
-    })();
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

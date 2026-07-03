@@ -1,0 +1,4 @@
+Contact: mailto:info@gorgeousesthetics.nl
+Expires: 2027-07-03T00:00:00.000Z
+Preferred-Languages: nl, en
+Canonical: https://gorgeousesthetics.nl/.well-known/security.txt
