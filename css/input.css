@@ -16,8 +16,8 @@ section[id] {
 }
 
 ::selection {
-  background-color: #d4af37;
-  color: #1a2e40;
+  background-color: #a9823c;
+  color: #1c3d5a;
 }
 
 /* Scroll-reveal (progressive enhancement: alleen actief als JS de .js-class zet) */

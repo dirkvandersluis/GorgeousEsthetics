@@ -23,7 +23,7 @@
   const onScroll = () => {
     const s = window.scrollY > 12;
     bar.classList.toggle('bg-cream/95', s);
-    bar.classList.toggle('shadow-[0_16px_40px_-24px_rgba(26,46,64,0.5)]', s);
+    bar.classList.toggle('shadow-[0_16px_40px_-24px_rgba(28,61,90,0.5)]', s);
     bar.classList.toggle('bg-cream/80', !s);
   };
   onScroll();
@@ -65,5 +65,15 @@
       target.focus({ preventScroll: true });
       history.replaceState(null, '', '#contactkaart');
     });
+  });
+})();
+
+// E-mail deobfuscatie (anti-spam): het adres staat niet als platte tekst of
+// mailto: in de HTML, maar gesplitst in data-attributen. De mailto: wordt hier
+// pas in de browser opgebouwd, waardoor scrapers/spambots het adres niet oogsten.
+(function () {
+  document.querySelectorAll('a[data-eml-user][data-eml-domain]').forEach((a) => {
+    const addr = a.getAttribute('data-eml-user') + '@' + a.getAttribute('data-eml-domain');
+    a.setAttribute('href', 'mailto:' + addr);
   });
 })();
