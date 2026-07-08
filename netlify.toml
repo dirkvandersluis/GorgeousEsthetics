@@ -1,3 +1,14 @@
+# ===========================================================================
+# LET OP (CSP / toekomstige integraties):
+# De Content-Security-Policy hieronder is strikt: default-src 'self' en
+# script-src 'self' blokkeren ALLE externe scripts, styles, fonts en frames.
+# Wordt er later iets externs toegevoegd — bijvoorbeeld Google Analytics,
+# Facebook Pixel, een boekingswidget zoals Salonized, of externe webfonts —
+# dan moet de CSP-header hieronder worden uitgebreid met de betreffende
+# domeinen (bv. script-src/style-src/font-src/frame-src/connect-src), anders
+# worden die resources geblokkeerd. Nu geen wijziging nodig; puur ter referentie.
+# ===========================================================================
+
 [build]
   publish = "."
   command = "npm install && npm run build"

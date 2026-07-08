@@ -11,7 +11,9 @@
   <meta property="og:locale" content="nl_NL">
   <link rel="canonical" href="https://gorgeousesthetics.nl/over-gorgi.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+  <link rel="preload" href="fonts/fraunces-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/tailwind.css">
   <script src="js/head.js"></script>
@@ -24,7 +26,7 @@
     <div class="mx-auto max-w-7xl px-5 sm:px-8">
       <div id="header-bar" class="mt-3 flex items-center gap-6 rounded-2xl border border-navy/10 bg-cream/80 px-5 py-3 backdrop-blur-md transition-all duration-300 ease-in-out md:px-7">
         <a href="index.html" class="flex items-center" aria-label="Gorgeous Esthetics home">
-          <img src="img/logo.png" alt="Gorgeous Esthetics" class="h-12 w-auto md:h-14">
+          <img src="img/logo.png" alt="Gorgeous Esthetics" width="1024" height="575" class="h-12 w-auto md:h-14">
         </a>
         <nav class="hidden items-center gap-8 lg:flex" aria-label="Hoofdnavigatie">
           <a href="index.html" class="text-xs font-medium uppercase tracking-[0.15em] text-navy/80 transition-colors duration-300 hover:text-gold">Home</a>
@@ -73,6 +75,7 @@
           <p class="mt-6 text-base leading-relaxed text-navy/75 md:text-lg">Mijn reis in de cosmetische wereld begon met een duidelijke visie: een serene plek creëren op Goeree-Overflakkee waar tijd en persoonlijke aandacht weer de standaard zijn, niet de uitzondering. Bij Gorgeous Esthetics geloof ik niet in haastwerk of overbehandeling.</p>
         </div>
         <div class="reveal order-1 lg:order-2">
+          <!-- OVER-MIJ FOTO: plaats hier de foto als <img class="h-full w-full object-cover" loading="lazy" width=".." height=".." alt=".."> — behoud de aspect-[4/5] container zodat er geen CLS ontstaat. -->
           <div class="aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-gold/40 bg-sand shadow-[0_40px_80px_-45px_rgba(28,61,90,0.4)]">
             <div class="flex h-full w-full items-center justify-center"><span class="font-serif text-lg italic text-navy/40">Foto volgt</span></div>
           </div>
@@ -93,6 +96,7 @@
     <section class="py-20 md:py-28">
       <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
         <div class="reveal">
+          <!-- OVER-MIJ FOTO: plaats hier de foto als <img class="h-full w-full object-cover" loading="lazy" width=".." height=".." alt=".."> — behoud de aspect-[4/5] container zodat er geen CLS ontstaat. -->
           <div class="aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-gold/40 bg-sand shadow-[0_40px_80px_-45px_rgba(28,61,90,0.4)]">
             <div class="flex h-full w-full items-center justify-center"><span class="font-serif text-lg italic text-navy/40">Foto volgt</span></div>
           </div>
@@ -114,8 +118,8 @@
         <p class="reveal mx-auto mt-8 max-w-prose text-base leading-relaxed text-navy/75 md:text-lg">Bij Gorgeous Esthetics bent u in deskundige en veilige handen. Als BIG-geregistreerd verpleegkundig specialist met een afgeronde masteropleiding beschik ik over uitgebreide medische kennis en ben ik bevoegd om zelfstandig diagnoses te stellen en behandelingen uit te voeren.</p>
         <p class="reveal mx-auto mt-5 max-w-prose text-base leading-relaxed text-navy/75 md:text-lg">Kwaliteit, veiligheid en een natuurlijk resultaat staan bij mij centraal. Ik ben aangesloten bij de beroepsvereniging V&amp;VN Verpleegkundig Specialisten en heb mijn opleiding Medische en Cosmetische Injectables succesvol afgerond aan Aureus Academy. Door mijn medische achtergrond en specialistische opleiding kunt u rekenen op een professionele behandeling, persoonlijk advies en zorg die volledig is afgestemd op uw wensen.</p>
         <div class="reveal mt-12 flex flex-wrap items-center justify-center gap-10 sm:gap-16">
-          <img src="img/logo-vvn.png" alt="Logo beroepsregistratie" class="h-[60px] w-auto opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
-          <img src="img/logo-aureus-academy.png" alt="Logo Aureus Academy" class="h-[60px] w-auto opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+          <img src="img/logo-vvn.png" alt="Logo beroepsregistratie" loading="lazy" width="984" height="359" class="h-[60px] w-auto opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+          <img src="img/logo-aureus-academy.png" alt="Logo Aureus Academy" loading="lazy" width="400" height="379" class="h-[60px] w-auto opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
         </div>
         <p class="reveal mx-auto mt-12 max-w-prose font-serif text-lg italic leading-relaxed text-navy/70">Uw natuurlijke schoonheid versterken, met oog voor veiligheid en kwaliteit, dat is waar Gorgeous Esthetics voor staat.</p>
         <p class="reveal mt-8 text-sm text-navy/50">BIG-registratienummer: 19916520730</p>
@@ -162,7 +166,7 @@
     <div class="border-t border-cream/10">
       <div class="mx-auto max-w-7xl px-5 py-6 text-center sm:px-8">
         <p class="text-xs text-cream/50">&copy; 2026 Gorgeous Esthetics. Alle rechten voorbehouden. Designed with elegance.</p>
-        <p class="mt-2 text-xs text-cream/60">Website gemaakt door Dirk van der Sluis</p>
+        <p class="mt-2 text-xs text-cream/60">Website door Dirk van der Sluis</p>
       </div>
     </div>
     <!-- Disclaimer -->

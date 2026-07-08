@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gorgeousesthetics.nl/sitemap.xml
+# Niet-indexeerbare pagina's (404 + juridische/klachten-pagina's)
+Disallow: /404.html
+Disallow: /privacy.html
+Disallow: /voorwaarden.html
+Disallow: /klachtenregeling.html
+
+Sitemap: https://gorgeousesthetics.netlify.app/sitemap.xml
