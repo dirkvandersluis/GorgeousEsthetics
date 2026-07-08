@@ -1,6 +1,6 @@
 # Gorgeous Esthetics
 
-Website voor Gorgeous Esthetics, een botox- en skinboostersalon in Middelharnis.
+Website voor Gorgeous Esthetics, een botox- en skinboosterpraktijk in Middelharnis.
 Statische site (HTML + vanilla JS), styling via Tailwind CSS (lokaal gebouwd),
 self-hosted fonts, gehost via Netlify.
 
