@@ -13,10 +13,10 @@ GitHub: dirkvandersluis/GorgeousEsthetics
 - Pagina's: index.html, behandelingen.html, tarieven.html, over-gorgi.html, contact.html, 404.html
 
 ## Design system
-- Navy #1A2E40 (primary)
-- Gold #D4AF37 (accent)
-- Cream #FDFBF7 (achtergrond)
-- Sand #F5F1E9 (achtergrond variant)
+- Navy #1C3D5A (primary)
+- Gold #A9823C (accent)
+- Cream #F3ECE1 (achtergrond)
+- Sand #EAE1D1 (achtergrond variant)
 - Fraunces: koppen/headings
 - Inter: body tekst
 - Stijl: asymmetrische hero, genummerde behandelteasers, icon-based cards, scroll reveal animations met prefers-reduced-motion support
