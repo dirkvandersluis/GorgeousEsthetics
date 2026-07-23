@@ -1,0 +1,172 @@
+- generic [active] [ref=e1]:
+  - link "Ga naar inhoud" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - navigation "Hoofdnavigatie" [ref=e3]:
+    - link [ref=e4] [cursor=pointer]:
+      - /url: index.html
+      - img "Maria Studio" [ref=e5]
+    - generic [ref=e6]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: index.html
+        - listitem [ref=e10]:
+          - link "Kaarten" [ref=e11] [cursor=pointer]:
+            - /url: kaarten.html
+        - listitem [ref=e12]:
+          - link "Bundels" [ref=e13] [cursor=pointer]:
+            - /url: bundels.html
+        - listitem [ref=e14]:
+          - link "Contact" [ref=e15] [cursor=pointer]:
+            - /url: contact.html
+      - link "Instagram" [ref=e16] [cursor=pointer]:
+        - /url: https://www.instagram.com/by.rosaliemaria
+      - button "Winkelmandje" [ref=e21] [cursor=pointer]
+  - banner [ref=e25]:
+    - heading "De kaarten" [level=1] [ref=e26]
+    - paragraph [ref=e27]:
+      - text: "Elk kaartje is met de hand ontworpen. Prijs: € 2,50 per kaart. Gratis verzending vanaf € 40,00."
+      - link "Meerdere kaarten nodig? Bekijk de bundels vanaf € 2,00 per kaart." [ref=e28] [cursor=pointer]:
+        - /url: bundels.html
+  - group "Filter op categorie" [ref=e29]:
+    - button "Alles" [ref=e30] [cursor=pointer]
+    - button "Verjaardag" [ref=e31] [cursor=pointer]
+    - button "Christelijk" [ref=e32] [cursor=pointer]
+    - button "Liefde" [ref=e33] [cursor=pointer]
+    - button "Zomaar" [ref=e34] [cursor=pointer]
+  - generic [ref=e36]:
+    - link "Nothing was lost if Jesus was gained Nothing was lost if Jesus was gained € 2,50" [ref=e38] [cursor=pointer]:
+      - /url: kaart-detail.html?id=1
+      - img "Nothing was lost if Jesus was gained" [ref=e40]
+      - generic [ref=e41]:
+        - heading "Nothing was lost if Jesus was gained" [level=3] [ref=e42]
+        - generic [ref=e43]: € 2,50
+    - link "There's joy in the house of our Lord There's joy in the house of our Lord € 2,50" [ref=e45] [cursor=pointer]:
+      - /url: kaart-detail.html?id=3
+      - img "There's joy in the house of our Lord" [ref=e47]
+      - generic [ref=e48]:
+        - heading "There's joy in the house of our Lord" [level=3] [ref=e49]
+        - generic [ref=e50]: € 2,50
+    - link "I will dwell in the house of the Lord forever I will dwell in the house of the Lord forever € 2,50" [ref=e52] [cursor=pointer]:
+      - /url: kaart-detail.html?id=4
+      - img "I will dwell in the house of the Lord forever" [ref=e54]
+      - generic [ref=e55]:
+        - heading "I will dwell in the house of the Lord forever" [level=3] [ref=e56]
+        - generic [ref=e57]: € 2,50
+    - link "If God is for us, who can be against us? If God is for us, who can be against us? € 2,50" [ref=e59] [cursor=pointer]:
+      - /url: kaart-detail.html?id=6
+      - img "If God is for us, who can be against us?" [ref=e61]
+      - generic [ref=e62]:
+        - heading "If God is for us, who can be against us?" [level=3] [ref=e63]
+        - generic [ref=e64]: € 2,50
+    - link "Grachtenpand Grachtenpand € 2,50" [ref=e66] [cursor=pointer]:
+      - /url: kaart-detail.html?id=10
+      - img "Grachtenpand" [ref=e68]
+      - generic [ref=e69]:
+        - heading "Grachtenpand" [level=3] [ref=e70]
+        - generic [ref=e71]: € 2,50
+    - link "Mumderful Mumderful € 2,50" [ref=e73] [cursor=pointer]:
+      - /url: kaart-detail.html?id=11
+      - img "Mumderful" [ref=e75]
+      - generic [ref=e76]:
+        - heading "Mumderful" [level=3] [ref=e77]
+        - generic [ref=e78]: € 2,50
+    - link "Bloemenpracht Bloemenpracht € 2,50" [ref=e80] [cursor=pointer]:
+      - /url: kaart-detail.html?id=12
+      - img "Bloemenpracht" [ref=e82]
+      - generic [ref=e83]:
+        - heading "Bloemenpracht" [level=3] [ref=e84]
+        - generic [ref=e85]: € 2,50
+    - link "True rest is found in the Lord True rest is found in the Lord € 2,50" [ref=e87] [cursor=pointer]:
+      - /url: kaart-detail.html?id=13
+      - img "True rest is found in the Lord" [ref=e89]
+      - generic [ref=e90]:
+        - heading "True rest is found in the Lord" [level=3] [ref=e91]
+        - generic [ref=e92]: € 2,50
+    - link "He can do a lot with a little He can do a lot with a little € 2,50" [ref=e94] [cursor=pointer]:
+      - /url: kaart-detail.html?id=17
+      - img "He can do a lot with a little" [ref=e96]
+      - generic [ref=e97]:
+        - heading "He can do a lot with a little" [level=3] [ref=e98]
+        - generic [ref=e99]: € 2,50
+    - link "I will climb this mountain with my eyes fixed only on You I will climb this mountain with my eyes fixed only on You € 2,50" [ref=e101] [cursor=pointer]:
+      - /url: kaart-detail.html?id=18
+      - img "I will climb this mountain with my eyes fixed only on You" [ref=e103]
+      - generic [ref=e104]:
+        - heading "I will climb this mountain with my eyes fixed only on You" [level=3] [ref=e105]
+        - generic [ref=e106]: € 2,50
+    - link "Vul dit huis met Uw glorie Vul dit huis met Uw glorie € 2,50" [ref=e108] [cursor=pointer]:
+      - /url: kaart-detail.html?id=19
+      - img "Vul dit huis met Uw glorie" [ref=e110]
+      - generic [ref=e111]:
+        - heading "Vul dit huis met Uw glorie" [level=3] [ref=e112]
+        - generic [ref=e113]: € 2,50
+    - link "Everything I have I owe to God Everything I have I owe to God € 2,50" [ref=e115] [cursor=pointer]:
+      - /url: kaart-detail.html?id=22
+      - img "Everything I have I owe to God" [ref=e117]
+      - generic [ref=e118]:
+        - heading "Everything I have I owe to God" [level=3] [ref=e119]
+        - generic [ref=e120]: € 2,50
+    - link "Hoogbouw Hoogbouw € 2,50" [ref=e122] [cursor=pointer]:
+      - /url: kaart-detail.html?id=24
+      - img "Hoogbouw" [ref=e124]
+      - generic [ref=e125]:
+        - heading "Hoogbouw" [level=3] [ref=e126]
+        - generic [ref=e127]: € 2,50
+    - link "Heer, wijs mij Uw weg Heer, wijs mij Uw weg € 2,50" [ref=e129] [cursor=pointer]:
+      - /url: kaart-detail.html?id=25
+      - img "Heer, wijs mij Uw weg" [ref=e131]
+      - generic [ref=e132]:
+        - heading "Heer, wijs mij Uw weg" [level=3] [ref=e133]
+        - generic [ref=e134]: € 2,50
+    - link "U bent met al mijn wegen vertrouwd U bent met al mijn wegen vertrouwd € 2,50" [ref=e136] [cursor=pointer]:
+      - /url: kaart-detail.html?id=26
+      - img "U bent met al mijn wegen vertrouwd" [ref=e138]
+      - generic [ref=e139]:
+        - heading "U bent met al mijn wegen vertrouwd" [level=3] [ref=e140]
+        - generic [ref=e141]: € 2,50
+    - link "Bloemenpatroon Bloemenpatroon € 2,50" [ref=e143] [cursor=pointer]:
+      - /url: kaart-detail.html?id=27
+      - img "Bloemenpatroon" [ref=e145]
+      - generic [ref=e146]:
+        - heading "Bloemenpatroon" [level=3] [ref=e147]
+        - generic [ref=e148]: € 2,50
+    - link "Stadsgezicht Stadsgezicht € 2,50" [ref=e150] [cursor=pointer]:
+      - /url: kaart-detail.html?id=28
+      - img "Stadsgezicht" [ref=e152]
+      - generic [ref=e153]:
+        - heading "Stadsgezicht" [level=3] [ref=e154]
+        - generic [ref=e155]: € 2,50
+    - link "Rotterdam Rotterdam € 2,50" [ref=e157] [cursor=pointer]:
+      - /url: kaart-detail.html?id=31
+      - img "Rotterdam" [ref=e159]
+      - generic [ref=e160]:
+        - heading "Rotterdam" [level=3] [ref=e161]
+        - generic [ref=e162]: € 2,50
+  - generic [ref=e163]:
+    - heading "Eigen idee?" [level=2] [ref=e164]
+    - paragraph [ref=e165]: Heb je zelf een idee voor een kaart? Stuur me een berichtje en samen kijken we naar een ontwerp dat helemaal past bij jouw idee. Een gepersonaliseerde kaart kost € 6,00. Gratis verzending vanaf € 40,00.
+    - button "Bestel een persoonlijke kaart" [ref=e166] [cursor=pointer]
+  - contentinfo [ref=e167]:
+    - generic [ref=e168]:
+      - generic [ref=e169]:
+        - paragraph [ref=e170]: Maria Studio
+        - paragraph [ref=e171]: Handgemaakte kaarten met liefde gemaakt
+        - link "@by.rosaliemaria" [ref=e172] [cursor=pointer]:
+          - /url: https://www.instagram.com/by.rosaliemaria
+      - navigation "Sitemap" [ref=e173]:
+        - link "Home" [ref=e174] [cursor=pointer]:
+          - /url: index.html
+        - link "Kaarten" [ref=e175] [cursor=pointer]:
+          - /url: kaarten.html
+        - link "Bundels" [ref=e176] [cursor=pointer]:
+          - /url: bundels.html
+        - link "Contact" [ref=e177] [cursor=pointer]:
+          - /url: contact.html
+      - generic [ref=e178]:
+        - paragraph [ref=e179]: "Formaat: 10,5 x 14,8 cm (A6)"
+        - paragraph [ref=e180]: "Prijs: € 2,50 per kaart"
+        - paragraph [ref=e181]: "Bundels: vanaf € 2,00 per kaart"
+        - paragraph [ref=e182]: "Gepersonaliseerd: € 6,00"
+        - paragraph [ref=e183]: "Verzending: gratis vanaf € 40,00"
+    - paragraph [ref=e184]: © 2025 Maria Studio — Rosalie Maria van der Sluis
