@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 .netlify
 .claude
+.playwright-mcp
 
 # Gegenereerd door de Tailwind-build (wordt bij elke Netlify-deploy opnieuw gebouwd)
 css/tailwind.css
