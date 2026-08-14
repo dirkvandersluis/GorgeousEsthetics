@@ -8,4 +8,4 @@ Disallow: /cookiebeleid.html
 Disallow: /voorwaarden.html
 Disallow: /klachtenregeling.html
 
-Sitemap: https://gorgeousesthetics.netlify.app/sitemap.xml
+Sitemap: https://gorgeousesthetics.nl/sitemap.xml

@@ -15,7 +15,7 @@
   <script src="js/head.js"></script>
 </head>
 
-<body class="bg-cream text-navy antialiased">
+<body class="bg-cream text-navy antialiased pb-24 lg:pb-0">
 
   <!-- ============================ HEADER ============================ -->
   <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out">
@@ -132,5 +132,16 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <!-- Sticky mobiele CTA-balk -->
+  <div id="sticky-mobile-cta" class="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-navy/10 bg-cream/95 p-3 backdrop-blur-md lg:hidden">
+    <a href="https://wa.me/31622629400" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full border border-navy px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-navy">
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+      WhatsApp
+    </a>
+    <a href="contact.html" data-book-cta class="flex-1 inline-flex items-center justify-center rounded-full border border-gold bg-navy px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-cream">
+      Neem contact op
+    </a>
+  </div>
+
 </body>
 </html>

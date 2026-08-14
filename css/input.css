@@ -32,6 +32,13 @@ section[id] {
   transform: none;
 }
 
+/* Sticky mobiele CTA-balk: extra ruimte voor de home-indicator op iPhones.
+   Staat hier en niet als inline style-attribuut, omdat de CSP in netlify.toml
+   style-src 'self' zonder 'unsafe-inline' hanteert. */
+#sticky-mobile-cta {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
