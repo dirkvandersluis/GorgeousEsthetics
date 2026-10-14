@@ -39,6 +39,20 @@ section[id] {
   padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
 }
 
+/* Reviewblok (homepage en contactpagina). De knop is de bestaande secundaire
+   outline-stijl, zodat hij ondergeschikt blijft aan de gouden boekknop. */
+@layer components {
+  .review-cta-title {
+    @apply font-serif text-xl font-semibold text-navy md:text-2xl;
+  }
+  .review-cta-text {
+    @apply mt-2 text-sm leading-relaxed text-navy/70;
+  }
+  .review-cta-btn {
+    @apply mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-navy px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-navy transition-all duration-300 ease-in-out hover:scale-105 hover:bg-navy hover:text-cream;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
