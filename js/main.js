@@ -1,3 +1,18 @@
+// Tijdelijke acties: elementen met data-promo-end staan standaard op hidden en
+// worden alleen getoond zolang de einddatum nog niet bereikt is. Een normale prijs
+// met data-promo-regular binnen dezelfde ouder wordt dan verborgen. Zonder JS of na
+// de einddatum blijft dus alleen de normale prijs zichtbaar. Staat bovenaan zodat
+// de wissel gebeurt voordat scroll-reveal de kaarten zichtbaar maakt.
+(function () {
+  document.querySelectorAll('[data-promo-end]').forEach((el) => {
+    const end = Date.parse(el.getAttribute('data-promo-end'));
+    if (Number.isNaN(end) || Date.now() >= end) return;
+    el.hidden = false;
+    const regular = el.parentElement.querySelector('[data-promo-regular]');
+    if (regular) regular.hidden = true;
+  });
+})();
+
 // Mobiel menu
 (function () {
   const toggle = document.getElementById('menu-toggle');
